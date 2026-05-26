@@ -819,7 +819,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   gap: 48px;
 }
 
@@ -865,17 +865,14 @@ body {
   color: var(--text);
 }
 
-.footer__bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer__bottom p {
+.footer__copy {
   font-size: 13px;
   color: var(--text-dim);
+  margin-bottom: 20px;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border);
 }
 
 .footer__address {
@@ -1169,9 +1166,7 @@ body {
     flex-wrap: wrap;
   }
 
-  .footer__bottom {
-    flex-direction: column;
-    gap: 8px;
+  .footer__copy {
     text-align: center;
   }
 }
