@@ -881,6 +881,13 @@ body {
   line-height: 1.6;
 }
 
+.footer__legal {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.65;
+  margin-top: 10px;
+}
+
 /* ---- COOKIE BANNER ---- */
 .cookie-banner {
   position: fixed;
