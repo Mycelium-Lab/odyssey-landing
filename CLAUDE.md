@@ -20,6 +20,7 @@ The repo is hosted at `git@github.com:Mycelium-Lab/odyssey-landing.git`. Push `m
 | `styles.css` | All styles. Uses CSS custom properties defined in `:root`. BEM-ish class naming. |
 | `script.js` | Nav scroll behaviour, mobile menu toggle, fade-up IntersectionObserver, contact form handler, cookie banner (localStorage key: `odyssey_cookie_consent`) |
 | `cookie-policy.html` | Standalone legal page. Shares `styles.css`; has its own inline `<style>` block for page-specific layout. |
+| `career.html` | Standalone careers page. Shares `styles.css` + `script.js`; has its own inline `<style>` block. Lists perks (why work with us) and a "no open roles yet" notice pointing to `hello@theodyssey.one`. Linked from nav, mobile menu, and footer. |
 
 ## Key details
 

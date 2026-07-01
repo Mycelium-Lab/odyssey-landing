@@ -57,62 +57,64 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 
-form.addEventListener('submit', async function(e) {
-  e.preventDefault();
+if (form) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-  const btnSpan = submitBtn.querySelector('span');
-  submitBtn.disabled = true;
-  btnSpan.textContent = 'Sending...';
+    const btnSpan = submitBtn.querySelector('span');
+    submitBtn.disabled = true;
+    btnSpan.textContent = 'Sending...';
 
-  const formData = new FormData(form);
-  const action = form.getAttribute('action');
+    const formData = new FormData(form);
+    const action = form.getAttribute('action');
 
-  // If form action is the placeholder, use mailto fallback
-  if (action.includes('YOUR_FORM_ID')) {
-    const name = formData.get('name') || '';
-    const email = formData.get('email') || '';
-    const message = formData.get('message') || '';
+    // If form action is the placeholder, use mailto fallback
+    if (action.includes('YOUR_FORM_ID')) {
+      const name = formData.get('name') || '';
+      const email = formData.get('email') || '';
+      const message = formData.get('message') || '';
 
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    const mailtoUrl = `mailto:hello@theodyssey.one?subject=${encodeURIComponent('Inquiry from theodyssey.one')}&body=${encodeURIComponent(body)}`;
+      const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+      const mailtoUrl = `mailto:hello@theodyssey.one?subject=${encodeURIComponent('Inquiry from theodyssey.one')}&body=${encodeURIComponent(body)}`;
 
-    window.location.href = mailtoUrl;
-    btnSpan.textContent = 'Send message';
-    submitBtn.disabled = false;
-    return;
-  }
+      window.location.href = mailtoUrl;
+      btnSpan.textContent = 'Send message';
+      submitBtn.disabled = false;
+      return;
+    }
 
-  try {
-    const response = await fetch(action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (response.ok) {
-      btnSpan.textContent = 'Message sent!';
-      submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
-      submitBtn.querySelector('svg').style.display = 'none';
-      form.reset();
+      if (response.ok) {
+        btnSpan.textContent = 'Message sent!';
+        submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+        submitBtn.querySelector('svg').style.display = 'none';
+        form.reset();
+        setTimeout(() => {
+          btnSpan.textContent = 'Send message';
+          submitBtn.style.background = '';
+          submitBtn.querySelector('svg').style.display = '';
+          submitBtn.disabled = false;
+        }, 4000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch {
+      btnSpan.textContent = 'Something went wrong — try email';
+      submitBtn.style.background = 'linear-gradient(135deg, #EF4444, #DC2626)';
       setTimeout(() => {
         btnSpan.textContent = 'Send message';
         submitBtn.style.background = '';
-        submitBtn.querySelector('svg').style.display = '';
         submitBtn.disabled = false;
-      }, 4000);
-    } else {
-      throw new Error('Form submission failed');
+      }, 3000);
     }
-  } catch {
-    btnSpan.textContent = 'Something went wrong — try email';
-    submitBtn.style.background = 'linear-gradient(135deg, #EF4444, #DC2626)';
-    setTimeout(() => {
-      btnSpan.textContent = 'Send message';
-      submitBtn.style.background = '';
-      submitBtn.disabled = false;
-    }, 3000);
-  }
-});
+  });
+}
 
 // Smooth active nav highlight on scroll
 const sections = document.querySelectorAll('section[id]');

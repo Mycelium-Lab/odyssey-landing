@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — Odyssey</title>
+  <meta name="description" content="Join Odyssey — a venture studio building consumer web and mobile app products that reach millions. See why people love building with us.">
+  <meta property="og:title" content="Careers — Odyssey">
+  <meta property="og:description" content="Build consumer products that reach millions. See why people love building with Odyssey.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ---- CAREERS HERO ---- */
+    .careers-hero {
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--nav-height) + 80px) 0 56px;
+    }
+    .careers-hero .container { position: relative; z-index: 1; }
+    .careers-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 28px;
+      transition: color var(--transition);
+    }
+    .careers-hero__back:hover { color: var(--accent-light); }
+    .careers-hero__title {
+      font-size: clamp(48px, 7.5vw, 84px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+      margin-bottom: 22px;
+    }
+    .careers-hero__subtitle {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.75;
+    }
+    .careers-hero__actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+
+    /* ---- PERKS ---- */
+    .perks { padding: 40px 0 90px; background: var(--bg); }
+    .perks__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .perks .feature-card { padding: 30px; }
+    .perks .feature-card__icon { font-size: 32px; margin-bottom: 16px; }
+    .perks .feature-card h3 { font-size: 17px; margin-bottom: 10px; }
+    .perks .feature-card p { font-size: 14px; line-height: 1.7; }
+
+    /* ---- NO OPEN ROLES ---- */
+    .no-roles { padding: 0 0 110px; background: var(--bg); }
+    .no-roles__card {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 60px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .no-roles__card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-subtle);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .no-roles__inner { position: relative; z-index: 1; }
+    .no-roles__icon { font-size: 46px; margin-bottom: 22px; line-height: 1; }
+    .no-roles__card h3 {
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .no-roles__card p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 560px;
+      margin: 0 auto 30px;
+    }
+    .no-roles__email { color: var(--accent-light); font-weight: 600; }
+
+    @media (max-width: 900px) {
+      .perks__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .perks__grid { grid-template-columns: 1fr; }
+      .no-roles__card { padding: 44px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Odyssey</a>
+      <div class="nav__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#verticals">Verticals</a>
+        <a href="index.html#process">How we work</a>
+        <a href="career.html">Career</a>
+        <a href="index.html#contact" class="nav__cta-link">Get in touch</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about" class="mobile-menu__link">About</a>
+    <a href="index.html#verticals" class="mobile-menu__link">Verticals</a>
+    <a href="index.html#process" class="mobile-menu__link">How we work</a>
+    <a href="career.html" class="mobile-menu__link">Career</a>
+    <a href="index.html#contact" class="mobile-menu__link">Get in touch</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="careers-hero">
+    <div class="hero__bg">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="container">
+      <a href="index.html" class="careers-hero__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to homepage
+      </a>
+      <span class="label fade-up">Careers</span>
+      <h1 class="careers-hero__title fade-up">
+        Build products<br>
+        <span class="gradient-text">millions will use</span>
+      </h1>
+      <p class="careers-hero__subtitle fade-up">
+        At Odyssey, you don't maintain someone else's roadmap — you help create products from scratch and ship them to real users. If you like building fast, owning outcomes, and seeing your work in the market, you'll feel at home here.
+      </p>
+      <div class="careers-hero__actions fade-up">
+        <a href="mailto:hello@theodyssey.one?subject=Future%20collaboration%20with%20Odyssey" class="btn btn--primary">Get in touch</a>
+        <a href="#perks" class="btn btn--ghost">Why join us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PERKS -->
+  <section class="perks" id="perks">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Why Odyssey</span>
+        <h2 class="section-title fade-up">Why people love<br>building with us</h2>
+        <p class="section-subtitle fade-up">A studio model that gives you real ownership, fast feedback loops, and a front-row seat to building consumer products at scale.</p>
+      </div>
+      <div class="perks__grid">
+        <div class="feature-card fade-up">
+          <div class="feature-card__icon">🚀</div>
+          <h3>Real Ownership</h3>
+          <p>Join a small, senior team where your work ships to real users — not a backlog. You own projects end to end and watch your impact show up in the metrics.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-card__icon">⚡</div>
+          <h3>Ship Fast</h3>
+          <p>We build in weeks, not quarters. Minimal process, fast decisions, and a strong bias for getting things in front of real users early.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-card__icon">📈</div>
+          <h3>Share the Upside</h3>
+          <p>We build and own the products we create. The people who help build them share in the value and the growth they generate.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-card__icon">🌍</div>
+          <h3>Remote-First</h3>
+          <p>Work from wherever you do your best work. We care about outcomes and trust — not hours logged at a desk.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-card__icon">🧠</div>
+          <h3>Grow Across Verticals</h3>
+          <p>Health, legaltech, education, entertainment — you'll work across markets and modern stacks, and level up faster than on a single product.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-card__icon">🤝</div>
+          <h3>Learn from Operators</h3>
+          <p>Work side by side with founders and operators who've built and scaled consumer products, with mentorship built into how we work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NO OPEN ROLES -->
+  <section class="no-roles" id="open-roles">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Open positions</span>
+        <h2 class="section-title fade-up">Want to join the journey?</h2>
+      </div>
+      <div class="no-roles__card fade-up">
+        <div class="no-roles__inner">
+          <div class="no-roles__icon">🌱</div>
+          <h3>No open roles — for now</h3>
+          <p>Sorry, we don't have any open positions yet — but we're growing fast. Write to us at <span class="no-roles__email">hello@theodyssey.one</span> and tell us what you'd love to work on, and we'll get in touch with you about future collaboration.</p>
+          <a href="mailto:hello@theodyssey.one?subject=Future%20collaboration%20with%20Odyssey" class="btn btn--primary">
+            <span>Email hello@theodyssey.one</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">Odyssey</a>
+          <p>Venture Studio</p>
+          <p class="footer__legal">Operated by Baltic Mobile OÜ · Maakri 25, Tallinn, Estonia</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__nav-col">
+            <span class="footer__nav-title">Company</span>
+            <a href="index.html#about">About</a>
+            <a href="index.html#verticals">Verticals</a>
+            <a href="index.html#process">How we work</a>
+            <a href="career.html">Career</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-title">Contact</span>
+            <a href="mailto:hello@theodyssey.one">hello@theodyssey.one</a>
+          </div>
+          <div class="footer__nav-col">
+            <span class="footer__nav-title">Legal</span>
+            <a href="cookie-policy.html">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+      <p class="footer__copy">© 2026 Odyssey. All rights reserved.</p>
+      <div class="footer__bottom"></div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner" aria-live="polite">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;opacity:0.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p>We use cookies to ensure the best experience on our site. By clicking "Accept", you agree to our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--decline" id="cookieDecline">Decline</button>
+        <button class="cookie-btn cookie-btn--accept" id="cookieAccept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
