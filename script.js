@@ -155,3 +155,39 @@ document.getElementById('cookieDecline').addEventListener('click', () => {
   localStorage.setItem(COOKIE_KEY, 'declined');
   cookieBanner.classList.add('hidden');
 });
+
+// Magnetic primary buttons (subtle) — only on fine pointers, respects reduced motion
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+if (!prefersReducedMotion && finePointer) {
+  document.querySelectorAll('.btn--primary').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const mx = e.clientX - (rect.left + rect.width / 2);
+      const my = e.clientY - (rect.top + rect.height / 2);
+      btn.style.transform = `translate(${mx * 0.25}px, ${my * 0.4}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+}
+
+// Starfield generation — fills every .starfield (optional data-stars count)
+document.querySelectorAll('.starfield').forEach((field) => {
+  const count = parseInt(field.dataset.stars || '110', 10);
+  const stars = [];
+  for (let i = 0; i < count; i++) {
+    const x = (Math.random() * 100).toFixed(2);
+    const y = (Math.random() * 100).toFixed(2);
+    const size = (Math.random() * 2 + 0.6).toFixed(2);
+    const delay = (Math.random() * 5).toFixed(2);
+    const dur = (Math.random() * 4 + 3).toFixed(2);
+    const opacity = (Math.random() * 0.5 + 0.25).toFixed(2);
+    stars.push(
+      `<span style="left:${x}%;top:${y}%;width:${size}px;height:${size}px;opacity:${opacity};animation-delay:${delay}s;animation-duration:${dur}s"></span>`
+    );
+  }
+  field.innerHTML = stars.join('');
+});

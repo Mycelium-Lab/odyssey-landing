@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="The Odyssey">
+  <defs>
+    <linearGradient id="og" x1="6" y1="8" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <circle cx="24" cy="24" r="18" stroke="url(#og)" stroke-width="3.5"/>
+  <g transform="rotate(-38 24 24)">
+    <polygon points="24,8.5 27.5,24 24,39.5 20.5,24" fill="url(#og)"/>
+    <polygon points="24,8.5 27.5,24 24,24" fill="#67E8F9"/>
+  </g>
+  <circle cx="24" cy="24" r="2.4" fill="#0B1020" stroke="url(#og)" stroke-width="1.6"/>
+</svg>

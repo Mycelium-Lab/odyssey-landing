@@ -8,11 +8,14 @@
   <meta property="og:title" content="Careers — Odyssey">
   <meta property="og:description" content="Build consumer products that reach millions. See why people love building with Odyssey.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <meta property="og:image" content="https://theodyssey.one/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://theodyssey.one/career.html">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=5">
   <style>
     /* ---- CAREERS HERO ---- */
     .careers-hero {
@@ -34,14 +37,14 @@
     }
     .careers-hero__back:hover { color: var(--accent-light); }
     .careers-hero__title {
-      font-size: clamp(48px, 7.5vw, 84px);
+      font-size: clamp(38px, 5.5vw, 58px);
       font-weight: 900;
       line-height: 1.02;
       letter-spacing: -0.045em;
       margin-bottom: 22px;
     }
     .careers-hero__subtitle {
-      font-size: 18px;
+      font-size: 16px;
       color: var(--text-muted);
       max-width: 600px;
       line-height: 1.75;
@@ -89,7 +92,7 @@
     .no-roles__inner { position: relative; z-index: 1; }
     .no-roles__icon { font-size: 46px; margin-bottom: 22px; line-height: 1; }
     .no-roles__card h3 {
-      font-size: clamp(24px, 3vw, 32px);
+      font-size: clamp(20px, 2.4vw, 26px);
       font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 16px;
@@ -118,13 +121,14 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__container">
-      <a href="index.html" class="nav__logo">Odyssey</a>
+      <a href="index.html" class="nav__logo"><img src="assets/logo-mark.svg" alt="" width="28" height="28" class="nav__logo-mark"> The Odyssey</a>
       <div class="nav__links">
-        <a href="index.html#about">About</a>
-        <a href="index.html#verticals">Verticals</a>
-        <a href="index.html#process">How we work</a>
+        <a href="about.html">About</a>
+        <a href="ventures.html">Ventures</a>
+        <a href="approach.html">Approach</a>
+        <a href="insights.html">Insights</a>
         <a href="career.html">Career</a>
-        <a href="index.html#contact" class="nav__cta-link">Get in touch</a>
+        <a href="contact.html" class="nav__cta-link">Get in touch</a>
       </div>
       <button class="nav__burger" id="burger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -134,11 +138,12 @@
 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html#about" class="mobile-menu__link">About</a>
-    <a href="index.html#verticals" class="mobile-menu__link">Verticals</a>
-    <a href="index.html#process" class="mobile-menu__link">How we work</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="ventures.html" class="mobile-menu__link">Ventures</a>
+    <a href="approach.html" class="mobile-menu__link">Approach</a>
+    <a href="insights.html" class="mobile-menu__link">Insights</a>
     <a href="career.html" class="mobile-menu__link">Career</a>
-    <a href="index.html#contact" class="mobile-menu__link">Get in touch</a>
+    <a href="contact.html" class="mobile-menu__link">Get in touch</a>
   </div>
 
   <!-- HERO -->
@@ -177,32 +182,32 @@
       </div>
       <div class="perks__grid">
         <div class="feature-card fade-up">
-          <div class="feature-card__icon">🚀</div>
+          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="5"/><path d="M11.5 11.5 21 2"/><path d="M17 6l3 3"/><path d="M14.5 8.5l3 3"/></svg></span></div>
           <h3>Real Ownership</h3>
           <p>Join a small, senior team where your work ships to real users — not a backlog. You own projects end to end and watch your impact show up in the metrics.</p>
         </div>
         <div class="feature-card fade-up">
-          <div class="feature-card__icon">⚡</div>
+          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 L4 14 L10 14 L8 22 L20 10 L14 10 L16 2 Z"/></svg></span></div>
           <h3>Ship Fast</h3>
           <p>We build in weeks, not quarters. Minimal process, fast decisions, and a strong bias for getting things in front of real users early.</p>
         </div>
         <div class="feature-card fade-up">
-          <div class="feature-card__icon">📈</div>
+          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></span></div>
           <h3>Share the Upside</h3>
           <p>We build and own the products we create. The people who help build them share in the value and the growth they generate.</p>
         </div>
         <div class="feature-card fade-up">
-          <div class="feature-card__icon">🌍</div>
+          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9z"/></svg></span></div>
           <h3>Remote-First</h3>
           <p>Work from wherever you do your best work. We care about outcomes and trust — not hours logged at a desk.</p>
         </div>
         <div class="feature-card fade-up">
-          <div class="feature-card__icon">🧠</div>
+          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg></span></div>
           <h3>Grow Across Verticals</h3>
           <p>Health, legaltech, education, entertainment — you'll work across markets and modern stacks, and level up faster than on a single product.</p>
         </div>
         <div class="feature-card fade-up">
-          <div class="feature-card__icon">🤝</div>
+          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
           <h3>Learn from Operators</h3>
           <p>Work side by side with founders and operators who've built and scaled consumer products, with mentorship built into how we work.</p>
         </div>
@@ -219,7 +224,7 @@
       </div>
       <div class="no-roles__card fade-up">
         <div class="no-roles__inner">
-          <div class="no-roles__icon">🌱</div>
+          <div class="no-roles__icon"><span class="icon-chip icon-chip--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M12 20v-8"/><path d="M12 12C12 8 9 5 4 5c0 4 3 7 8 7z"/><path d="M12 14c0-3 2.5-5 6-5 0 3-2.5 5-6 5z"/></svg></span></div>
           <h3>No open roles — for now</h3>
           <p>Sorry, we don't have any open positions yet — but we're growing fast. Write to us at <span class="no-roles__email">hello@theodyssey.one</span> and tell us what you'd love to work on, and we'll get in touch with you about future collaboration.</p>
           <a href="mailto:hello@theodyssey.one?subject=Future%20collaboration%20with%20Odyssey" class="btn btn--primary">
@@ -236,29 +241,32 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <a href="index.html" class="nav__logo">Odyssey</a>
+          <a href="index.html" class="nav__logo"><img src="assets/logo-mark.svg" alt="" width="28" height="28" class="nav__logo-mark"> The Odyssey</a>
           <p>Venture Studio</p>
           <p class="footer__legal">Operated by Baltic Mobile OÜ · Maakri 25, Tallinn, Estonia</p>
         </div>
         <div class="footer__nav">
           <div class="footer__nav-col">
             <span class="footer__nav-title">Company</span>
-            <a href="index.html#about">About</a>
-            <a href="index.html#verticals">Verticals</a>
-            <a href="index.html#process">How we work</a>
+            <a href="about.html">About</a>
+            <a href="ventures.html">Ventures</a>
+            <a href="approach.html">Approach</a>
             <a href="career.html">Career</a>
           </div>
           <div class="footer__nav-col">
-            <span class="footer__nav-title">Contact</span>
-            <a href="mailto:hello@theodyssey.one">hello@theodyssey.one</a>
+            <span class="footer__nav-title">Resources</span>
+            <a href="insights.html">Insights</a>
+            <a href="contact.html">Contact</a>
           </div>
           <div class="footer__nav-col">
             <span class="footer__nav-title">Legal</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
             <a href="cookie-policy.html">Cookie Policy</a>
           </div>
         </div>
       </div>
-      <p class="footer__copy">© 2026 Odyssey. All rights reserved.</p>
+      <p class="footer__copy">© 2026 The Odyssey. All rights reserved.</p>
       <div class="footer__bottom"></div>
     </div>
   </footer>
