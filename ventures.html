@@ -15,7 +15,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
+  <style>
+    /* White sun in the hero */
+    .v-sun { position:absolute; right:-40px; top:50%; transform:translateY(-50%); width:clamp(220px,30vw,440px); height:clamp(220px,30vw,440px); z-index:0; pointer-events:none; }
+    .v-sun svg { width:100%; height:100%; display:block; }
+    @media (max-width:760px){ .v-sun{ opacity:0.55; right:-130px; } }
+
+    /* Full-width constellation band */
+    .constel { position:relative; overflow:hidden; padding:120px 0; text-align:center;
+      background:radial-gradient(120% 90% at 50% 42%, #111a3a 0%, #0b1020 46%, #080b16 100%);
+      border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .constel .container { position:relative; z-index:3; }
+    .constel__scene { position:absolute; inset:0; z-index:1; opacity:0.85; }
+    .constel__scene svg { width:100%; height:100%; display:block; }
+    .constel__text .display { font-size:clamp(26px,4.2vw,48px); }
+    .constel__label { position:absolute; z-index:2; font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-light); white-space:nowrap; }
+    .constel__label--tl { left:7%; top:18%; } .constel__label--tr { right:7%; top:18%; }
+    .constel__label--bl { left:7%; bottom:18%; } .constel__label--br { right:7%; bottom:18%; }
+    @media (max-width:760px){ .constel__label{ font-size:9.5px; letter-spacing:0.08em; } .constel__label--tl,.constel__label--bl{ left:4%; } .constel__label--tr,.constel__label--br{ right:4%; } }
+
+    /* Satellite on the CTA */
+    .cta-sat { position:absolute; z-index:0; right:5%; top:15%; width:clamp(130px,17vw,230px); opacity:0.6; pointer-events:none; }
+    .cta-sat svg { width:100%; height:100%; display:block; }
+    @media (max-width:760px){ .cta-sat{ opacity:0.32; right:-30px; top:6%; } }
+  </style>
 </head>
 <body>
 
@@ -49,12 +73,26 @@
   <header class="page-hero">
     <div class="starfield" data-stars="70"></div>
     <div class="page-hero__glow"></div>
+    <div class="v-sun" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none">
+        <defs>
+          <radialGradient id="vSunGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+            <stop offset="26%" stop-color="#ffffff" stop-opacity="0.5"/>
+            <stop offset="55%" stop-color="#dbe7ff" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#dbe7ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="200" fill="url(#vSunGlow)"/>
+        <circle cx="200" cy="200" r="96" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="70" fill="#ffffff"/>
+      </svg>
+    </div>
     <div class="container">
       <a href="index.html" class="page-hero__back">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         Back to homepage
       </a>
-      <span class="label">Our ventures</span>
       <h1 class="page-hero__title fade-up">Where we<br><span class="gradient-text">build</span></h1>
       <p class="page-hero__subtitle fade-up">We operate in high-growth consumer markets where digital products can drive meaningful impact — and where demand exists and competition is winnable.</p>
     </div>
@@ -138,11 +176,39 @@
     </div>
   </section>
 
-  <!-- STATEMENT -->
-  <section class="statement">
-    <div class="starfield" data-stars="90"></div>
+  <!-- CONSTELLATION BAND -->
+  <section class="constel">
+    <div class="starfield" data-stars="70"></div>
+    <div class="constel__scene" aria-hidden="true">
+      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" fill="none">
+        <g stroke="#dbe7ff" stroke-width="1.4" opacity="0.4">
+          <polyline points="150,120 240,150 320,110"/><polyline points="240,150 270,215 185,195"/>
+          <polyline points="1120,120 1205,150 1300,118"/><polyline points="1205,150 1250,215 1160,205"/>
+          <polyline points="150,405 245,435 320,402"/><polyline points="245,435 268,345 182,368"/>
+          <polyline points="1130,405 1220,435 1305,410"/><polyline points="1220,435 1255,348 1162,366"/>
+        </g>
+        <g fill="#dbe7ff">
+          <circle cx="150" cy="120" r="3.5"/><circle cx="240" cy="150" r="5"/><circle cx="320" cy="110" r="3.5"/><circle cx="270" cy="215" r="3"/><circle cx="185" cy="195" r="3"/>
+          <circle cx="1120" cy="120" r="3.5"/><circle cx="1205" cy="150" r="5"/><circle cx="1300" cy="118" r="3.5"/><circle cx="1250" cy="215" r="3"/><circle cx="1160" cy="205" r="3"/>
+          <circle cx="150" cy="405" r="3.5"/><circle cx="245" cy="435" r="5"/><circle cx="320" cy="402" r="3.5"/><circle cx="268" cy="345" r="3"/><circle cx="182" cy="368" r="3"/>
+          <circle cx="1130" cy="405" r="3.5"/><circle cx="1220" cy="435" r="5"/><circle cx="1305" cy="410" r="3.5"/><circle cx="1255" cy="348" r="3"/><circle cx="1162" cy="366" r="3"/>
+        </g>
+        <g fill="#dbe7ff" opacity="0.5">
+          <circle cx="480" cy="90" r="2"/><circle cx="720" cy="60" r="2.4"/><circle cx="960" cy="100" r="2"/><circle cx="600" cy="150" r="1.6"/><circle cx="860" cy="140" r="1.6"/>
+          <circle cx="520" cy="470" r="2"/><circle cx="760" cy="500" r="2.4"/><circle cx="980" cy="470" r="2"/><circle cx="660" cy="430" r="1.6"/><circle cx="900" cy="440" r="1.6"/>
+          <circle cx="80" cy="280" r="2"/><circle cx="1360" cy="280" r="2"/>
+        </g>
+      </svg>
+    </div>
+    <span class="constel__label constel__label--tl">Health &amp; Wellness</span>
+    <span class="constel__label constel__label--tr">Legaltech</span>
+    <span class="constel__label constel__label--bl">Education</span>
+    <span class="constel__label constel__label--br">Entertainment</span>
     <div class="container">
-      <p class="statement__text fade-up">We don't chase trends. Before we commit a team, a market has to prove that <strong>people already pay to solve the problem</strong> — and that a small, fast studio can take share.</p>
+      <div class="constel__text fade-up">
+        <span class="kicker" style="justify-content:center;">Four markets · one sky</span>
+        <h2 class="display">Four markets.<br>Millions of reasons to come back.</h2>
+      </div>
     </div>
   </section>
 
@@ -208,7 +274,7 @@
         <h2 class="display fade-up">How we partner</h2>
         <p class="lead" style="margin-top:16px;">Most of what we build, we build ourselves — but the right partners make every venture stronger.</p>
       </div>
-      <div class="verticals__grid">
+      <div class="verticals__grid" style="grid-template-columns:repeat(3,1fr);">
         <div class="vertical-card fade-up">
           <div class="vertical-card__top">
             <div class="vertical-card__icon"><span class="icon-chip icon-chip--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
@@ -240,6 +306,18 @@
   <!-- CTA -->
   <section class="cta-band">
     <div class="starfield" data-stars="50"></div>
+    <div class="cta-sat" aria-hidden="true">
+      <svg viewBox="0 0 260 180" fill="none" stroke="#dbe7ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="18" y="66" width="60" height="46" rx="3" opacity="0.55"/>
+        <line x1="38" y1="66" x2="38" y2="112" opacity="0.45"/><line x1="58" y1="66" x2="58" y2="112" opacity="0.45"/><line x1="18" y1="89" x2="78" y2="89" opacity="0.45"/>
+        <rect x="182" y="66" width="60" height="46" rx="3" opacity="0.55"/>
+        <line x1="202" y1="66" x2="202" y2="112" opacity="0.45"/><line x1="222" y1="66" x2="222" y2="112" opacity="0.45"/><line x1="182" y1="89" x2="242" y2="89" opacity="0.45"/>
+        <line x1="78" y1="89" x2="104" y2="89" opacity="0.6"/><line x1="156" y1="89" x2="182" y2="89" opacity="0.6"/>
+        <rect x="104" y="72" width="52" height="34" rx="6" opacity="0.85"/>
+        <ellipse cx="130" cy="52" rx="16" ry="8" opacity="0.6"/><line x1="130" y1="60" x2="130" y2="72" opacity="0.6"/>
+        <path d="M150 30 a26 26 0 0 1 24 24" opacity="0.5"/><path d="M158 20 a40 40 0 0 1 38 38" opacity="0.32"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="cta-band__inner">
         <h2>Want the full picture?</h2>
