@@ -15,13 +15,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
   <style>
     /* White sun in the hero — semi-transparent, nearer the centre */
-    .v-sun { position:absolute; right:24%; top:50%; transform:translateY(-50%); width:clamp(190px,24vw,360px); height:clamp(190px,24vw,360px); z-index:0; opacity:0.5; pointer-events:none; }
+    .v-sun { position:absolute; right:24%; top:50%; transform:translateY(-50%); width:clamp(200px,25vw,380px); height:clamp(200px,25vw,380px); z-index:0; opacity:0.85; pointer-events:none; }
     .v-sun svg { width:100%; height:100%; display:block; }
-    @media (max-width:900px){ .v-sun{ right:12%; opacity:0.42; } }
-    @media (max-width:760px){ .v-sun{ opacity:0.3; right:4%; width:170px; height:170px; } }
+    @media (max-width:900px){ .v-sun{ right:12%; opacity:0.72; } }
+    @media (max-width:760px){ .v-sun{ opacity:0.5; right:4%; width:180px; height:180px; } }
 
     /* Full-width constellation band */
     .constel { position:relative; overflow:hidden; padding:120px 0; text-align:center;
@@ -99,79 +99,75 @@
     </div>
   </header>
 
-  <!-- VERTICALS — SHOWCASE -->
+  <!-- STUDIO PLATFORM — BENTO -->
   <section class="verticals" style="padding-top:64px;">
     <div class="container">
       <div class="section-header" style="text-align:left;margin-bottom:44px;max-width:640px;">
-        <span class="kicker">The verticals</span>
-        <h2 class="display fade-up">Four consumer markets we know deeply</h2>
-        <p class="lead" style="margin-top:16px;">We go narrow on purpose. Each vertical shares the same DNA: recurring problems, real willingness to pay, and room for a fast, well-designed product to win.</p>
+        <span class="kicker">The studio platform</span>
+        <h2 class="display fade-up">What every venture is built on</h2>
+        <p class="lead" style="margin-top:16px;">Nobody starts from a blank repo. Each venture plugs into a shared foundation — so the team spends its time on the product, not the plumbing.</p>
       </div>
-      <div class="showcase">
-        <div class="showcase__tile fade-up" style="background:radial-gradient(120% 120% at 20% 15%,rgba(139,92,246,0.4),transparent 55%),#0b1020;">
-          <div class="showcase__bg"><svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid slice"><path d="M20 150 H120 L150 70 L200 230 L235 150 H380" stroke="#dbe7ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/></svg></div>
-          <div class="showcase__body">
-            <span class="showcase__num">01 — Health &amp; Wellness</span>
-            <h3>Habits that stick</h3>
-            <p>Apps that help people build sustainable habits, manage well-being, and access health information anytime. High LTV, recurring revenue, strong organic growth.</p>
-            <div class="showcase__tags"><span>Mental health</span><span>Fitness</span><span>Nutrition</span><span>Sleep</span></div>
-          </div>
+      <div class="bento">
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><rect x="150" y="62" width="110" height="26" rx="6" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/><rect x="150" y="98" width="110" height="26" rx="6" stroke="#dbe7ff" stroke-width="2" opacity="0.45"/><rect x="150" y="134" width="110" height="26" rx="6" stroke="#dbe7ff" stroke-width="2" opacity="0.4"/><circle cx="166" cy="75" r="3" fill="#dbe7ff"/><circle cx="166" cy="111" r="3" fill="#dbe7ff"/></svg></div>
+          <span class="bento__num">01</span>
+          <h3>Shared infrastructure</h3>
+          <p>Auth, payments, billing, and analytics are solved once and reused — so a new venture is running on day one instead of rebuilding the basics.</p>
         </div>
-        <div class="showcase__tile fade-up" style="background:radial-gradient(120% 120% at 80% 15%,rgba(34,211,238,0.34),transparent 55%),#0b1020;">
-          <div class="showcase__bg"><svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid slice"><path d="M200 60v200M120 100h160M140 100l-34 70a30 30 0 0 0 68 0zM260 100l-34 70a30 30 0 0 0 68 0z" stroke="#dbe7ff" stroke-width="2" fill="none" opacity="0.5"/></svg></div>
-          <div class="showcase__body">
-            <span class="showcase__num">02 — Legaltech</span>
-            <h3>Law, made accessible</h3>
-            <p>Document automation, guidance, and compliance for everyone who can't afford a lawyer — legal help that fits in a browser and speaks plain language.</p>
-            <div class="showcase__tags"><span>Documents</span><span>Compliance</span><span>Legal AI</span><span>Privacy</span></div>
-          </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><path d="M150 66 H270 L228 128 V182 H192 V128 Z" stroke="#dbe7ff" stroke-width="2.2" fill="#22D3EE" fill-opacity="0.06" stroke-linejoin="round" opacity="0.55"/></svg></div>
+          <span class="bento__num">02</span>
+          <h3>Growth engine</h3>
+          <p>Proven Web-to-Web and Web-to-App funnels, paid and organic channels, and the tooling to measure every step from first click to retention.</p>
         </div>
-        <div class="showcase__tile fade-up" style="background:radial-gradient(120% 120% at 20% 85%,rgba(236,72,153,0.3),transparent 55%),#0b1020;">
-          <div class="showcase__bg"><svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid slice"><path d="M200 90 60 140l140 50 140-50z" stroke="#dbe7ff" stroke-width="2" fill="none" opacity="0.5"/><path d="M110 165v55c0 12 40 28 90 28s90-16 90-28v-55" stroke="#dbe7ff" stroke-width="2" fill="none" opacity="0.5"/></svg></div>
-          <div class="showcase__body">
-            <span class="showcase__num">03 — Education</span>
-            <h3>Learning that lands</h3>
-            <p>Bite-sized, adaptive learning with real retention mechanics — EdTech people actually come back to, across every age and skill level.</p>
-            <div class="showcase__tags"><span>Skills</span><span>Languages</span><span>Courses</span></div>
-          </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><rect x="152" y="64" width="46" height="46" rx="6" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/><rect x="210" y="64" width="46" height="46" rx="6" stroke="#dbe7ff" stroke-width="2" opacity="0.4"/><rect x="152" y="122" width="46" height="46" rx="6" stroke="#dbe7ff" stroke-width="2" opacity="0.4"/><rect x="210" y="122" width="46" height="46" rx="6" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/></svg></div>
+          <span class="bento__num">03</span>
+          <h3>Design system</h3>
+          <p>A shared component library and the cosmic design language of this site — so every product looks trustworthy from the very first screen.</p>
         </div>
-        <div class="showcase__tile fade-up" style="background:radial-gradient(120% 120% at 80% 85%,rgba(59,130,246,0.34),transparent 55%),#0b1020;">
-          <div class="showcase__bg"><svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid slice"><circle cx="200" cy="150" r="80" stroke="#dbe7ff" stroke-width="2" fill="none" opacity="0.5"/><path d="M180 118 240 150l-60 32z" fill="#dbe7ff" opacity="0.5"/></svg></div>
-          <div class="showcase__body">
-            <span class="showcase__num">04 — Entertainment</span>
-            <h3>Made to come back to</h3>
-            <p>Interactive content and experiences engineered for high retention and organic growth — apps that earn a daily open, not a one-time visit.</p>
-            <div class="showcase__tags"><span>Lifestyle</span><span>Content</span><span>Interactive</span><span>Media</span></div>
-          </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><circle cx="158" cy="120" r="14" stroke="#dbe7ff" stroke-width="2" opacity="0.55"/><path d="M172 114 L250 80 M172 126 L250 160" stroke="#dbe7ff" stroke-width="2" opacity="0.45"/><circle cx="262" cy="78" r="11" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/><circle cx="262" cy="162" r="11" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/></svg></div>
+          <span class="bento__num">04</span>
+          <h3>Data &amp; experimentation</h3>
+          <p>Event tracking and a testing harness are baked in, so decisions are made on live user behaviour and clean numbers — never on opinion.</p>
+        </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><path d="M204 54 258 72 v40 c0 40 -30 56 -54 64 c-24 -8 -54 -24 -54 -64 V72 Z" stroke="#dbe7ff" stroke-width="2.2" fill="none" opacity="0.5"/><polyline points="182,116 200,134 228,100" stroke="#dbe7ff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/></svg></div>
+          <span class="bento__num">05</span>
+          <h3>Payments &amp; compliance</h3>
+          <p>Relationships with acquirers and infrastructure partners, plus GDPR-ready foundations built for US, UK, and EU markets from the start.</p>
+        </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><polyline points="156,78 168,90 188,68" stroke="#dbe7ff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/><line x1="206" y1="80" x2="270" y2="80" stroke="#dbe7ff" stroke-width="2" opacity="0.45"/><polyline points="156,122 168,134 188,112" stroke="#dbe7ff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/><line x1="206" y1="124" x2="270" y2="124" stroke="#dbe7ff" stroke-width="2" opacity="0.4"/></svg></div>
+          <span class="bento__num">06</span>
+          <h3>Playbooks &amp; lessons</h3>
+          <p>Every past venture — the wins and the failures — becomes a checklist the next team doesn't have to rediscover the hard way.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MODELS — FEATURE ROWS -->
+  <!-- ECONOMICS -->
   <section class="verticals" style="background:var(--bg-alt);border-top:1px solid var(--border);">
     <div class="container">
-      <div class="section-header" style="text-align:left;margin-bottom:20px;max-width:640px;">
-        <span class="kicker">How we monetize</span>
-        <h2 class="display fade-up">Two models, one playbook</h2>
-        <p class="lead" style="margin-top:16px;">Every venture ships in one of two formats — chosen by what converts best for the audience, never by what flatters our ambition.</p>
-      </div>
-      <div class="feature-row fade-up">
-        <div class="feature-row__media"><img src="assets/feat-web.png" alt="Web-to-Web — a web product in space" loading="lazy"></div>
-        <div class="feature-row__text">
-          <h2>Web-to-Web</h2>
-          <p>Fully web-native products with subscription or freemium monetization. Fast to iterate, instantly accessible, and optimized for search and paid channels — no app store gatekeeping, and changes that ship in minutes.</p>
-          <p>It's the fastest way to validate demand and prove economics, which is why most ventures start here.</p>
-          <div class="feature-row__tags"><span>Subscription</span><span>Freemium</span><span>SEO &amp; paid</span><span>Instant iteration</span></div>
+      <div class="about__grid">
+        <div class="about__content fade-up">
+          <span class="kicker">The discipline</span>
+          <h2 class="display" style="margin-bottom:22px;">Built for economics that actually work</h2>
+          <p>A product can look busy and still lose money on every single user. Before we pour fuel on a venture, the maths has to work — quietly, on a spreadsheet, at small scale.</p>
+          <p>We watch the relationship between what it costs to earn a customer and what that customer is worth over time. If acquisition can't pay for itself inside a window we can actually fund, the venture doesn't graduate — no matter how good the demo looks.</p>
+          <p>That discipline is unglamorous, and it's exactly why the ones that survive keep surviving.</p>
         </div>
-      </div>
-      <div class="feature-row feature-row--reverse fade-up">
-        <div class="feature-row__media"><img src="assets/feat-mobile.png" alt="Web-to-App — a mobile app in space" loading="lazy"></div>
-        <div class="feature-row__text">
-          <h2>Web-to-App</h2>
-          <p>Optimized web funnels that convert audiences directly into mobile app installs. We capture demand on the web, then hand off to a native experience built for retention and lifetime value.</p>
-          <p>We reach for it when value compounds over time — habit products where a home-screen presence is the point.</p>
-          <div class="feature-row__tags"><span>Native app</span><span>Funnels</span><span>Retention</span><span>LTV</span></div>
+        <div class="glass fade-up" style="padding:34px;align-self:start;">
+          <h3 style="font-size:16px;font-weight:700;margin-bottom:18px;">The numbers that decide it</h3>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">LTV has to clear CAC — with room to spare, not by a hair.</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Payback inside a window we can actually afford to fund.</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Retention first — churn quietly undoes every other number.</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Margin-aware pricing, set for US / UK / EU from day one.</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Prove it small before spending anything to scale it.</p></div>
+          </div>
         </div>
       </div>
     </div>
@@ -249,19 +245,39 @@
     </div>
   </section>
 
-  <!-- LIFECYCLE — TIMELINE -->
+  <!-- SIGNALS WE WATCH — BENTO -->
   <section class="verticals" style="background:var(--bg-alt);border-top:1px solid var(--border);">
     <div class="container">
-      <div class="section-header" style="margin-bottom:52px;">
-        <span class="kicker" style="justify-content:center;">From signal to scale</span>
-        <h2 class="display fade-up">The lifecycle of a venture</h2>
-        <p class="lead fade-up" style="margin-top:16px;max-width:620px;margin-left:auto;margin-right:auto;">Every product moves through the same gates — and has to earn its way to the next one.</p>
+      <div class="section-header" style="text-align:left;margin-bottom:44px;max-width:640px;">
+        <span class="kicker">How we find them</span>
+        <h2 class="display fade-up">The signals we watch</h2>
+        <p class="lead" style="margin-top:16px;">Ideas don't come from brainstorms. They come from watching a handful of signals across our verticals — and moving when several line up at once.</p>
       </div>
-      <div class="timeline">
-        <div class="timeline__item fade-up"><div class="timeline__dot">1</div><h3>Signal</h3><p>A demand signal in one of our verticals turns into a written thesis: who hurts, how badly, and why now. If we can't state it in a sentence, we keep digging.</p></div>
-        <div class="timeline__item fade-up"><div class="timeline__dot">2</div><h3>Validate</h3><p>Landing pages, funnels, and small paid tests measure whether the market actually leans in — before a line of production code exists.</p></div>
-        <div class="timeline__item fade-up"><div class="timeline__dot">3</div><h3>Build</h3><p>A senior team ships the core loop in weeks on shared studio infrastructure, then iterates on live user behaviour rather than opinion.</p></div>
-        <div class="timeline__item fade-up"><div class="timeline__dot">4</div><h3>Scale</h3><p>Products that hit their retention and economics targets get full resources; the rest are pivoted or retired without drama.</p></div>
+      <div class="bento" style="grid-template-columns:repeat(2,1fr);">
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><path d="M60 40 V180 H340" stroke="#dbe7ff" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.35"/><polyline points="90,150 160,120 210,132 300,64" stroke="#dbe7ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/><circle cx="300" cy="64" r="6" fill="#dbe7ff"/></svg></div>
+          <span class="bento__num">01</span>
+          <h3>Demand you can measure</h3>
+          <p>Rising search volume, waitlists, and people paying for clumsy workarounds. Real intent always leaves a trail — we just have to read it.</p>
+        </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><path d="M180 60 H150 V160 H180" stroke="#dbe7ff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.55"/><path d="M220 60 H250 V160 H220" stroke="#dbe7ff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.55"/><line x1="200" y1="92" x2="200" y2="128" stroke="#dbe7ff" stroke-width="2.4" stroke-linecap="round" opacity="0.4"/></svg></div>
+          <span class="bento__num">02</span>
+          <h3>Pricing gaps</h3>
+          <p>Incumbents that are overpriced, over-complicated, or bundling things people never asked for. Every gap they leave is an opening for us.</p>
+        </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><path d="M60 160 C 160 160, 180 70, 320 70" stroke="#dbe7ff" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.55"/><polyline points="296,54 322,70 296,86" stroke="#dbe7ff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/></svg></div>
+          <span class="bento__num">03</span>
+          <h3>Shifting behaviour</h3>
+          <p>New platforms, regulations, or habits that quietly change what people expect — and make yesterday's market leader suddenly beatable.</p>
+        </div>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><circle cx="150" cy="90" r="9" stroke="#dbe7ff" stroke-width="2" opacity="0.4"/><circle cx="196" cy="72" r="9" stroke="#dbe7ff" stroke-width="2" opacity="0.4"/><circle cx="176" cy="128" r="9" stroke="#dbe7ff" stroke-width="2" opacity="0.4"/><circle cx="244" cy="112" r="15" fill="#22D3EE" fill-opacity="0.12" stroke="#dbe7ff" stroke-width="2.4" opacity="0.7"/></svg></div>
+          <span class="bento__num">04</span>
+          <h3>Underserved segments</h3>
+          <p>Big, specific groups the current players ignore because they look "too small to matter." In our verticals, they rarely turn out to be.</p>
+        </div>
       </div>
     </div>
   </section>
