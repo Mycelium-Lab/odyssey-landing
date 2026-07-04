@@ -1760,12 +1760,17 @@ section[id] {
 .bento__cell--tall { grid-row: span 2; }
 .bento__cell > .bento__media {
   position: absolute;
-  inset: 0;
+  top: 22px;
+  right: 20px;
+  left: auto;
+  bottom: auto;
+  width: 130px;
+  height: 92px;
   z-index: 0;
-  opacity: 0.9;
-  padding: 24px 26px 100px;
+  opacity: 0.8;
+  padding: 0;
 }
-.bento__media svg, .bento__media img { width: 100%; height: 100%; object-fit: contain; object-position: center top; display: block; }
+.bento__media svg, .bento__media img { width: 100%; height: 100%; object-fit: contain; object-position: right top; display: block; }
 .bento__cell > * { position: relative; z-index: 1; }
 .bento__num { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent-light); margin-bottom: auto; }
 .bento__cell h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 8px; }

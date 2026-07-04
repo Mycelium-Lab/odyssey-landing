@@ -15,12 +15,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=14">
   <style>
-    /* White sun in the hero */
-    .v-sun { position:absolute; right:-40px; top:50%; transform:translateY(-50%); width:clamp(220px,30vw,440px); height:clamp(220px,30vw,440px); z-index:0; pointer-events:none; }
+    /* White sun in the hero — semi-transparent, nearer the centre */
+    .v-sun { position:absolute; right:24%; top:50%; transform:translateY(-50%); width:clamp(190px,24vw,360px); height:clamp(190px,24vw,360px); z-index:0; opacity:0.5; pointer-events:none; }
     .v-sun svg { width:100%; height:100%; display:block; }
-    @media (max-width:760px){ .v-sun{ opacity:0.55; right:-130px; } }
+    @media (max-width:900px){ .v-sun{ right:12%; opacity:0.42; } }
+    @media (max-width:760px){ .v-sun{ opacity:0.3; right:4%; width:170px; height:170px; } }
 
     /* Full-width constellation band */
     .constel { position:relative; overflow:hidden; padding:120px 0; text-align:center;
@@ -31,14 +32,14 @@
     .constel__scene svg { width:100%; height:100%; display:block; }
     .constel__text .display { font-size:clamp(26px,4.2vw,48px); }
     .constel__label { position:absolute; z-index:2; font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent-light); white-space:nowrap; }
-    .constel__label--tl { left:7%; top:18%; } .constel__label--tr { right:7%; top:18%; }
-    .constel__label--bl { left:7%; bottom:18%; } .constel__label--br { right:7%; bottom:18%; }
-    @media (max-width:760px){ .constel__label{ font-size:9.5px; letter-spacing:0.08em; } .constel__label--tl,.constel__label--bl{ left:4%; } .constel__label--tr,.constel__label--br{ right:4%; } }
+    .constel__label--tl { left:9%; top:24%; } .constel__label--tr { right:9%; top:24%; }
+    .constel__label--bl { left:9%; bottom:24%; } .constel__label--br { right:9%; bottom:24%; }
+    @media (max-width:760px){ .constel__label{ font-size:9.5px; letter-spacing:0.08em; } .constel__label--tl,.constel__label--bl{ left:5%; } .constel__label--tr,.constel__label--br{ right:5%; } }
 
-    /* Satellite on the CTA */
-    .cta-sat { position:absolute; z-index:0; right:5%; top:15%; width:clamp(130px,17vw,230px); opacity:0.6; pointer-events:none; }
+    /* Big satellite on the CTA */
+    .cta-sat { position:absolute; z-index:0; right:3%; top:11%; width:clamp(210px,28vw,390px); opacity:0.6; pointer-events:none; }
     .cta-sat svg { width:100%; height:100%; display:block; }
-    @media (max-width:760px){ .cta-sat{ opacity:0.32; right:-30px; top:6%; } }
+    @media (max-width:760px){ .cta-sat{ opacity:0.3; right:-40px; top:4%; width:200px; } }
   </style>
 </head>
 <body>
@@ -181,22 +182,21 @@
     <div class="starfield" data-stars="70"></div>
     <div class="constel__scene" aria-hidden="true">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" fill="none">
-        <g stroke="#dbe7ff" stroke-width="1.4" opacity="0.4">
-          <polyline points="150,120 240,150 320,110"/><polyline points="240,150 270,215 185,195"/>
-          <polyline points="1120,120 1205,150 1300,118"/><polyline points="1205,150 1250,215 1160,205"/>
-          <polyline points="150,405 245,435 320,402"/><polyline points="245,435 268,345 182,368"/>
-          <polyline points="1130,405 1220,435 1305,410"/><polyline points="1220,435 1255,348 1162,366"/>
+        <g stroke="#dbe7ff" stroke-width="1.3" opacity="0.4">
+          <polyline points="210,152 255,182 312,156"/><polyline points="255,182 280,222 216,212"/>
+          <polyline points="1128,156 1185,182 1235,152"/><polyline points="1185,182 1210,222 1145,214"/>
+          <polyline points="210,408 258,382 315,406"/><polyline points="258,382 282,338 217,352"/>
+          <polyline points="1130,406 1188,382 1240,404"/><polyline points="1188,382 1212,338 1146,352"/>
         </g>
         <g fill="#dbe7ff">
-          <circle cx="150" cy="120" r="3.5"/><circle cx="240" cy="150" r="5"/><circle cx="320" cy="110" r="3.5"/><circle cx="270" cy="215" r="3"/><circle cx="185" cy="195" r="3"/>
-          <circle cx="1120" cy="120" r="3.5"/><circle cx="1205" cy="150" r="5"/><circle cx="1300" cy="118" r="3.5"/><circle cx="1250" cy="215" r="3"/><circle cx="1160" cy="205" r="3"/>
-          <circle cx="150" cy="405" r="3.5"/><circle cx="245" cy="435" r="5"/><circle cx="320" cy="402" r="3.5"/><circle cx="268" cy="345" r="3"/><circle cx="182" cy="368" r="3"/>
-          <circle cx="1130" cy="405" r="3.5"/><circle cx="1220" cy="435" r="5"/><circle cx="1305" cy="410" r="3.5"/><circle cx="1255" cy="348" r="3"/><circle cx="1162" cy="366" r="3"/>
+          <circle cx="210" cy="152" r="2.6"/><circle cx="255" cy="182" r="3.6"/><circle cx="312" cy="156" r="2.6"/><circle cx="280" cy="222" r="2.4"/><circle cx="216" cy="212" r="2.4"/>
+          <circle cx="1128" cy="156" r="2.6"/><circle cx="1185" cy="182" r="3.6"/><circle cx="1235" cy="152" r="2.6"/><circle cx="1210" cy="222" r="2.4"/><circle cx="1145" cy="214" r="2.4"/>
+          <circle cx="210" cy="408" r="2.6"/><circle cx="258" cy="382" r="3.6"/><circle cx="315" cy="406" r="2.6"/><circle cx="282" cy="338" r="2.4"/><circle cx="217" cy="352" r="2.4"/>
+          <circle cx="1130" cy="406" r="2.6"/><circle cx="1188" cy="382" r="3.6"/><circle cx="1240" cy="404" r="2.6"/><circle cx="1212" cy="338" r="2.4"/><circle cx="1146" cy="352" r="2.4"/>
         </g>
         <g fill="#dbe7ff" opacity="0.5">
-          <circle cx="480" cy="90" r="2"/><circle cx="720" cy="60" r="2.4"/><circle cx="960" cy="100" r="2"/><circle cx="600" cy="150" r="1.6"/><circle cx="860" cy="140" r="1.6"/>
-          <circle cx="520" cy="470" r="2"/><circle cx="760" cy="500" r="2.4"/><circle cx="980" cy="470" r="2"/><circle cx="660" cy="430" r="1.6"/><circle cx="900" cy="440" r="1.6"/>
-          <circle cx="80" cy="280" r="2"/><circle cx="1360" cy="280" r="2"/>
+          <circle cx="500" cy="210" r="2"/><circle cx="720" cy="185" r="2.4"/><circle cx="960" cy="210" r="2"/><circle cx="610" cy="300" r="1.6"/><circle cx="850" cy="290" r="1.6"/>
+          <circle cx="560" cy="360" r="1.8"/><circle cx="900" cy="365" r="1.8"/><circle cx="80" cy="280" r="2"/><circle cx="1360" cy="280" r="2"/>
         </g>
       </svg>
     </div>
