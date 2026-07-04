@@ -56,18 +56,6 @@
       margin-top: 36px;
     }
 
-    /* ---- PERKS ---- */
-    .perks { padding: 40px 0 90px; background: var(--bg); }
-    .perks__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .perks .feature-card { padding: 30px; }
-    .perks .feature-card__icon { font-size: 32px; margin-bottom: 16px; }
-    .perks .feature-card h3 { font-size: 17px; margin-bottom: 10px; }
-    .perks .feature-card p { font-size: 14px; line-height: 1.7; }
-
     /* ---- NO OPEN ROLES ---- */
     .no-roles { padding: 0 0 110px; background: var(--bg); }
     .no-roles__card {
@@ -107,11 +95,7 @@
     }
     .no-roles__email { color: var(--accent-light); font-weight: 600; }
 
-    @media (max-width: 900px) {
-      .perks__grid { grid-template-columns: 1fr 1fr; }
-    }
     @media (max-width: 600px) {
-      .perks__grid { grid-template-columns: 1fr; }
       .no-roles__card { padding: 44px 24px; }
     }
   </style>
@@ -149,6 +133,7 @@
   <!-- HERO -->
   <header class="careers-hero">
     <div class="hero__bg">
+      <div class="starfield" data-stars="70"></div>
       <div class="hero__blob hero__blob--1"></div>
       <div class="hero__blob hero__blob--2"></div>
       <div class="hero__grid"></div>
@@ -172,46 +157,60 @@
     </div>
   </header>
 
-  <!-- PERKS -->
-  <section class="perks" id="perks">
+  <!-- PERKS — BENTO -->
+  <section class="verticals" id="perks" style="padding-top:40px;">
     <div class="container">
-      <div class="section-header">
-        <span class="label">Why Odyssey</span>
-        <h2 class="section-title fade-up">Why people love<br>building with us</h2>
-        <p class="section-subtitle fade-up">A studio model that gives you real ownership, fast feedback loops, and a front-row seat to building consumer products at scale.</p>
+      <div class="section-header" style="text-align:left;margin-bottom:44px;max-width:640px;">
+        <span class="kicker">Why Odyssey</span>
+        <h2 class="display fade-up">Why people love building with us</h2>
+        <p class="lead" style="margin-top:16px;">A studio model that gives you real ownership, fast feedback loops, and a front-row seat to building consumer products at scale.</p>
       </div>
-      <div class="perks__grid">
-        <div class="feature-card fade-up">
-          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="5"/><path d="M11.5 11.5 21 2"/><path d="M17 6l3 3"/><path d="M14.5 8.5l3 3"/></svg></span></div>
-          <h3>Real Ownership</h3>
+      <div class="bento">
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><circle cx="200" cy="108" r="80" stroke="#dbe7ff" stroke-width="1.6" opacity="0.35"/><circle cx="200" cy="108" r="46" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/><circle cx="200" cy="108" r="10" fill="#22D3EE" opacity="0.5"/></svg></div>
+          <span class="bento__num">01</span>
+          <h3>Real ownership</h3>
           <p>Join a small, senior team where your work ships to real users — not a backlog. You own projects end to end and watch your impact show up in the metrics.</p>
         </div>
-        <div class="feature-card fade-up">
-          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 L4 14 L10 14 L8 22 L20 10 L14 10 L16 2 Z"/></svg></span></div>
-          <h3>Ship Fast</h3>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><path d="M210 20 L150 130 L200 130 L160 200 L280 90 L220 90 L250 20 Z" stroke="#dbe7ff" stroke-width="2.4" fill="#22D3EE" fill-opacity="0.08" stroke-linejoin="round" opacity="0.6"/></svg></div>
+          <span class="bento__num">02</span>
+          <h3>Ship fast</h3>
           <p>We build in weeks, not quarters. Minimal process, fast decisions, and a strong bias for getting things in front of real users early.</p>
         </div>
-        <div class="feature-card fade-up">
-          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></span></div>
-          <h3>Share the Upside</h3>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><polyline points="40,180 120,120 190,145 270,80 370,40" stroke="#dbe7ff" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.55"/><polyline points="320,40 370,40 370,90" stroke="#dbe7ff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/></svg></div>
+          <span class="bento__num">03</span>
+          <h3>Share the upside</h3>
           <p>We build and own the products we create. The people who help build them share in the value and the growth they generate.</p>
         </div>
-        <div class="feature-card fade-up">
-          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9z"/></svg></span></div>
-          <h3>Remote-First</h3>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><circle cx="200" cy="110" r="70" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/><line x1="130" y1="110" x2="270" y2="110" stroke="#dbe7ff" stroke-width="1.4" opacity="0.4"/><ellipse cx="200" cy="110" rx="70" ry="26" stroke="#dbe7ff" stroke-width="1.4" opacity="0.4"/></svg></div>
+          <span class="bento__num">04</span>
+          <h3>Remote-first</h3>
           <p>Work from wherever you do your best work. We care about outcomes and trust — not hours logged at a desk.</p>
         </div>
-        <div class="feature-card fade-up">
-          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg></span></div>
-          <h3>Grow Across Verticals</h3>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><path d="M200 40 130 72l70 32 70-32z" stroke="#dbe7ff" stroke-width="2.2" fill="none" opacity="0.5"/><path d="M130 104l70 32 70-32" stroke="#dbe7ff" stroke-width="2.2" fill="none" opacity="0.42"/><path d="M130 136l70 32 70-32" stroke="#dbe7ff" stroke-width="2.2" fill="none" opacity="0.34"/></svg></div>
+          <span class="bento__num">05</span>
+          <h3>Grow across verticals</h3>
           <p>Health, legaltech, education, entertainment — you'll work across markets and modern stacks, and level up faster than on a single product.</p>
         </div>
-        <div class="feature-card fade-up">
-          <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></div>
-          <h3>Learn from Operators</h3>
+        <div class="bento__cell fade-up">
+          <div class="bento__media"><svg viewBox="0 0 400 220" fill="none" preserveAspectRatio="xMidYMin meet"><circle cx="200" cy="108" r="82" stroke="#dbe7ff" stroke-width="1.4" opacity="0.3"/><circle cx="150" cy="108" r="16" stroke="#dbe7ff" stroke-width="2" opacity="0.55"/><circle cx="250" cy="108" r="16" stroke="#dbe7ff" stroke-width="2" opacity="0.55"/></svg></div>
+          <span class="bento__num">06</span>
+          <h3>Learn from operators</h3>
           <p>Work side by side with founders and operators who've built and scaled consumer products, with mentorship built into how we work.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <div class="starfield" data-stars="90"></div>
+    <div class="container">
+      <p class="statement__text fade-up">We're deliberately small. That's not a stage we're trying to grow out of — <strong>it's the point.</strong> Small teams mean your work is visible and the distance from idea to shipped feature is measured in days.</p>
     </div>
   </section>
 
@@ -223,17 +222,17 @@
   </section>
 
   <!-- LIFE AT THE STUDIO -->
-  <section class="about" style="border-top:1px solid var(--border);">
+  <section class="verticals" style="border-top:1px solid var(--border);">
     <div class="container">
       <div class="about__grid">
         <div class="about__content fade-up">
-          <span class="label">Life at the studio</span>
-          <h2 class="section-title">Small team, real ownership</h2>
+          <span class="kicker">Life at the studio</span>
+          <h2 class="display" style="margin-bottom:22px;">Small team, real ownership</h2>
           <p>Odyssey is deliberately small. That's not a stage we're trying to grow out of — it's the point. Small teams mean your work is visible, your decisions matter, and the distance between an idea and a shipped feature is measured in days.</p>
           <p>You won't sit in a queue behind three layers of approval. You'll own a slice of a real product, talk to real users, and see your work in the metrics by the end of the week. When something works, everyone knows it was you. When it doesn't, we learn and move — no blame, no theatre.</p>
           <p>We care about outcomes, not hours. Work from where you do your best thinking, on a schedule that fits your life. What we ask in return is simple: take ownership, move fast, and tell the truth about what the numbers say.</p>
         </div>
-        <div class="glass fade-up" style="padding:34px;">
+        <div class="glass fade-up" style="padding:34px;align-self:start;">
           <h3 style="font-size:16px;font-weight:700;margin-bottom:18px;">What you can expect</h3>
           <div style="display:flex;flex-direction:column;gap:14px;">
             <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Remote-first, outcome-driven — trust over surveillance.</p></div>
@@ -246,38 +245,19 @@
     </div>
   </section>
 
-  <!-- HOW WE HIRE -->
-  <section class="process" style="background:var(--bg);border-top:1px solid var(--border);">
+  <!-- HOW WE HIRE — TIMELINE -->
+  <section class="verticals" style="background:var(--bg-alt);border-top:1px solid var(--border);">
     <div class="container">
-      <div class="section-header">
-        <span class="label">How we hire</span>
-        <h2 class="section-title fade-up">A short, honest process</h2>
-        <p class="section-subtitle fade-up">No trick questions, no month-long gauntlets. We want to see how you think and how you build — fast.</p>
+      <div class="section-header" style="margin-bottom:52px;">
+        <span class="kicker" style="justify-content:center;">How we hire</span>
+        <h2 class="display fade-up">A short, honest process</h2>
+        <p class="lead fade-up" style="margin-top:16px;max-width:600px;margin-left:auto;margin-right:auto;">No trick questions, no month-long gauntlets. We want to see how you think and how you build — fast.</p>
       </div>
-      <div class="process__steps">
-        <div class="process__step fade-up">
-          <div class="process__num">01</div>
-          <div class="process__connector"></div>
-          <h3>Intro call</h3>
-          <p>A relaxed conversation about your work, what you want to build, and whether the studio is the right fit for both sides.</p>
-        </div>
-        <div class="process__step fade-up">
-          <div class="process__num">02</div>
-          <div class="process__connector"></div>
-          <h3>Deep dive</h3>
-          <p>We go deep on real work — yours and ours. Expect to talk through decisions, trade-offs, and how you'd approach a live problem.</p>
-        </div>
-        <div class="process__step fade-up">
-          <div class="process__num">03</div>
-          <div class="process__connector"></div>
-          <h3>Build together</h3>
-          <p>A short, paid, practical exercise close to what you'd actually do here — so you can feel the work and we can see it.</p>
-        </div>
-        <div class="process__step fade-up">
-          <div class="process__num">04</div>
-          <h3>Decision</h3>
-          <p>A clear yes or no, quickly, with real feedback either way. No ghosting — you'll always know where you stand.</p>
-        </div>
+      <div class="timeline">
+        <div class="timeline__item fade-up"><div class="timeline__dot">1</div><h3>Intro call</h3><p>A relaxed conversation about your work, what you want to build, and whether the studio is the right fit for both sides.</p></div>
+        <div class="timeline__item fade-up"><div class="timeline__dot">2</div><h3>Deep dive</h3><p>We go deep on real work — yours and ours. Expect to talk through decisions, trade-offs, and how you'd approach a live problem.</p></div>
+        <div class="timeline__item fade-up"><div class="timeline__dot">3</div><h3>Build together</h3><p>A short, paid, practical exercise close to what you'd actually do here — so you can feel the work and we can see it.</p></div>
+        <div class="timeline__item fade-up"><div class="timeline__dot">4</div><h3>Decision</h3><p>A clear yes or no, quickly, with real feedback either way. No ghosting — you'll always know where you stand.</p></div>
       </div>
     </div>
   </section>
@@ -285,9 +265,9 @@
   <!-- WHAT WE LOOK FOR -->
   <section class="verticals" style="border-top:1px solid var(--border);">
     <div class="container">
-      <div class="section-header">
-        <span class="label">What we look for</span>
-        <h2 class="section-title fade-up">The kind of people who thrive here</h2>
+      <div class="section-header" style="text-align:left;margin-bottom:44px;max-width:640px;">
+        <span class="kicker">What we look for</span>
+        <h2 class="display fade-up">The kind of people who thrive here</h2>
       </div>
       <div class="about__cards" style="grid-template-columns:repeat(4,1fr);">
         <div class="feature-card fade-up">
@@ -315,11 +295,11 @@
   </section>
 
   <!-- NO OPEN ROLES -->
-  <section class="no-roles" id="open-roles">
+  <section class="no-roles" id="open-roles" style="border-top:1px solid var(--border);padding-top:90px;">
     <div class="container">
       <div class="section-header">
-        <span class="label">Open positions</span>
-        <h2 class="section-title fade-up">Want to join the journey?</h2>
+        <span class="kicker" style="justify-content:center;">Open positions</span>
+        <h2 class="display fade-up">Want to join the journey?</h2>
       </div>
       <div class="no-roles__card fade-up">
         <div class="no-roles__inner">
