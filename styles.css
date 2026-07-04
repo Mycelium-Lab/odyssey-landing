@@ -325,14 +325,11 @@ body {
 .hero .container {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .hero__inner {
   max-width: 780px;
-}
-
-@media (min-width: 1000px) {
-  .hero__inner { transform: translateX(-5vw); }
 }
 
 .hero__badge {
