@@ -16,6 +16,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=15">
+  <style>
+    /* Comet in the hero */
+    .a-comet { position:absolute; right:10%; top:50%; transform:translateY(-50%); width:clamp(240px,30vw,440px); z-index:0; opacity:0.85; pointer-events:none; }
+    .a-comet svg { width:100%; height:100%; display:block; }
+    @media (max-width:900px){ .a-comet{ right:2%; opacity:0.5; width:220px; } }
+
+    /* Full-width studio banner with overlaid text */
+    .a-band { position:relative; overflow:hidden; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .a-band__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:left center; }
+    .a-band__shade { position:absolute; inset:0; background:linear-gradient(90deg, rgba(8,11,22,0) 38%, rgba(8,11,22,0.72) 72%, rgba(8,11,22,0.9) 100%); }
+    .a-band .container { position:relative; z-index:1; padding-top:120px; padding-bottom:120px; display:flex; justify-content:flex-end; }
+    .a-band__text { max-width:560px; margin:0; text-align:left; }
+    @media (max-width:760px){ .a-band .container { padding-top:90px; padding-bottom:90px; } .a-band__shade { background:rgba(8,11,22,0.62); } }
+  </style>
 </head>
 <body>
 
@@ -49,27 +63,42 @@
   <header class="page-hero">
     <div class="starfield" data-stars="70"></div>
     <div class="page-hero__glow"></div>
+    <div class="a-comet" aria-hidden="true">
+      <svg viewBox="0 0 440 260" fill="none">
+        <defs>
+          <radialGradient id="aCometHead" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+            <stop offset="40%" stop-color="#dbe7ff" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#dbe7ff" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="aCometTail" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0"/>
+            <stop offset="70%" stop-color="#a5b8ff" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+          </linearGradient>
+        </defs>
+        <path d="M20 60 C 140 78, 250 108, 344 168" stroke="url(#aCometTail)" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M60 36 C 170 62, 268 100, 350 158" stroke="url(#aCometTail)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <path d="M40 96 C 150 104, 256 124, 338 176" stroke="url(#aCometTail)" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+        <circle cx="352" cy="172" r="56" fill="url(#aCometHead)"/>
+        <circle cx="352" cy="172" r="16" fill="#ffffff"/>
+        <circle cx="120" cy="150" r="2.4" fill="#dbe7ff" opacity="0.6"/>
+        <circle cx="230" cy="60" r="2" fill="#dbe7ff" opacity="0.5"/>
+        <circle cx="300" cy="230" r="2.2" fill="#dbe7ff" opacity="0.5"/>
+      </svg>
+    </div>
     <div class="container">
       <a href="index.html" class="page-hero__back">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         Back to homepage
       </a>
-      <span class="label">About Odyssey</span>
       <h1 class="page-hero__title fade-up">A studio that builds<br><span class="gradient-text">from the ground up</span></h1>
       <p class="page-hero__subtitle fade-up">We are a product venture studio creating consumer applications that solve real problems at scale — combining deep product thinking, fast execution, and data-driven growth.</p>
     </div>
   </header>
 
-  <!-- STATEMENT -->
-  <section class="statement">
-    <div class="starfield" data-stars="90"></div>
-    <div class="container">
-      <p class="statement__text fade-up">We're not an agency and not a fund. We <strong>conceive, build, and operate our own consumer products</strong> — carrying each one from a blank page to a business, and keeping the ones that earn their place.</p>
-    </div>
-  </section>
-
   <!-- OUR STORY -->
-  <section class="verticals" style="padding-top:20px;">
+  <section class="verticals" style="padding-top:64px;">
     <div class="container">
       <div class="about__grid">
         <div class="about__content fade-up">
@@ -92,10 +121,12 @@
     </div>
   </section>
 
-  <!-- COSMIC BANNER -->
-  <section style="padding:10px 0 34px;">
+  <!-- STUDIO BAND — full-width planet + statement -->
+  <section class="a-band">
+    <img src="assets/banner-about.png" alt="" class="a-band__img">
+    <div class="a-band__shade" aria-hidden="true"></div>
     <div class="container">
-      <img src="assets/banner-about.png" alt="Cosmic banner" style="width:100%;height:auto;display:block;border-radius:var(--radius-xl);border:1px solid var(--border);">
+      <p class="statement__text a-band__text fade-up">We're not an agency and not a fund. We <strong>conceive, build, and operate our own consumer products</strong> — carrying each one from a blank page to a business, and keeping the ones that earn their place.</p>
     </div>
   </section>
 

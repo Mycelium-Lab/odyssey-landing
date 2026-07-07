@@ -98,6 +98,11 @@
     @media (max-width: 600px) {
       .no-roles__card { padding: 44px 24px; }
     }
+
+    /* ---- ASTRONAUT IN HERO ---- */
+    .c-astro { position:absolute; right:9%; top:52%; transform:translateY(-50%); width:clamp(210px,24vw,360px); z-index:0; opacity:0.85; pointer-events:none; }
+    .c-astro svg { width:100%; height:100%; display:block; }
+    @media (max-width:900px){ .c-astro{ right:0; opacity:0.45; width:200px; } }
   </style>
 </head>
 <body>
@@ -137,6 +142,29 @@
       <div class="hero__blob hero__blob--1"></div>
       <div class="hero__blob hero__blob--2"></div>
       <div class="hero__grid"></div>
+    </div>
+    <div class="c-astro" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none">
+        <g transform="rotate(-14 200 200)">
+          <path d="M56 336 C 108 306, 142 282, 166 250" stroke="#dbe7ff" stroke-width="2" stroke-dasharray="6 8" stroke-linecap="round" opacity="0.4"/>
+          <rect x="146" y="130" width="108" height="86" rx="14" stroke="#dbe7ff" stroke-width="2" opacity="0.3"/>
+          <circle cx="200" cy="104" r="44" stroke="#dbe7ff" stroke-width="2.6" fill="#0b1020" fill-opacity="0.35" opacity="0.8"/>
+          <rect x="176" y="90" width="48" height="30" rx="14" stroke="#dbe7ff" stroke-width="1.6" fill="#9fe8ff" fill-opacity="0.22" opacity="0.75"/>
+          <rect x="168" y="148" width="64" height="76" rx="20" stroke="#dbe7ff" stroke-width="2.6" fill="#8B5CF6" fill-opacity="0.07" opacity="0.75"/>
+          <rect x="186" y="164" width="28" height="18" rx="4" stroke="#dbe7ff" stroke-width="1.6" opacity="0.5"/>
+          <path d="M168 160 C 138 150, 120 126, 118 98" stroke="#dbe7ff" stroke-width="9" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="117" cy="90" r="10" stroke="#dbe7ff" stroke-width="2.4" opacity="0.75"/>
+          <path d="M232 166 C 262 174, 280 194, 286 218" stroke="#dbe7ff" stroke-width="9" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="289" cy="226" r="10" stroke="#dbe7ff" stroke-width="2.4" opacity="0.75"/>
+          <path d="M184 224 C 178 254, 168 276, 152 294" stroke="#dbe7ff" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="148" cy="301" r="11" stroke="#dbe7ff" stroke-width="2.4" opacity="0.75"/>
+          <path d="M218 224 C 226 254, 238 274, 256 288" stroke="#dbe7ff" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="261" cy="295" r="11" stroke="#dbe7ff" stroke-width="2.4" opacity="0.75"/>
+          <circle cx="90" cy="180" r="2.4" fill="#dbe7ff" opacity="0.6"/>
+          <circle cx="316" cy="120" r="2.4" fill="#dbe7ff" opacity="0.6"/>
+          <circle cx="330" cy="330" r="2" fill="#dbe7ff" opacity="0.5"/>
+        </g>
+      </svg>
     </div>
     <div class="container">
       <a href="index.html" class="careers-hero__back">
@@ -206,42 +234,32 @@
     </div>
   </section>
 
+  <!-- NO OPEN ROLES -->
+  <section class="no-roles" id="open-roles" style="padding-top:10px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="kicker" style="justify-content:center;">Open positions</span>
+        <h2 class="display fade-up">Want to join the journey?</h2>
+      </div>
+      <div class="no-roles__card fade-up">
+        <div class="no-roles__inner">
+          <div class="no-roles__icon"><span class="icon-chip icon-chip--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M12 20v-8"/><path d="M12 12C12 8 9 5 4 5c0 4 3 7 8 7z"/><path d="M12 14c0-3 2.5-5 6-5 0 3-2.5 5-6 5z"/></svg></span></div>
+          <h3>No open roles — for now</h3>
+          <p>Sorry, we don't have any open positions yet — but we're growing fast. Write to us at <span class="no-roles__email">hello@theodyssey.one</span> and tell us what you'd love to work on, and we'll get in touch with you about future collaboration.</p>
+          <a href="mailto:hello@theodyssey.one?subject=Future%20collaboration%20with%20Odyssey" class="btn btn--primary">
+            <span>Email hello@theodyssey.one</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STATEMENT -->
-  <section class="statement">
+  <section class="statement" style="border-top:1px solid var(--border);">
     <div class="starfield" data-stars="90"></div>
     <div class="container">
       <p class="statement__text fade-up">We don't hand out job titles with ladders attached. You get <strong>a product surface with your name on it</strong> — and everyone in the studio can see what you did with it.</p>
-    </div>
-  </section>
-
-  <!-- COSMIC BANNER -->
-  <section style="padding:10px 0 0;">
-    <div class="container">
-      <img src="assets/banner-career.png" alt="Cosmic banner" style="width:100%;height:auto;display:block;border-radius:var(--radius-xl);border:1px solid var(--border);">
-    </div>
-  </section>
-
-  <!-- LIFE AT THE STUDIO -->
-  <section class="verticals" style="border-top:1px solid var(--border);">
-    <div class="container">
-      <div class="about__grid">
-        <div class="about__content fade-up">
-          <span class="kicker">Life at the studio</span>
-          <h2 class="display" style="margin-bottom:22px;">Small team, real ownership</h2>
-          <p>Odyssey is deliberately small. That's not a stage we're trying to grow out of — it's the point. Small teams mean your work is visible, your decisions matter, and the distance between an idea and a shipped feature is measured in days.</p>
-          <p>You won't sit in a queue behind three layers of approval. You'll own a slice of a real product, talk to real users, and see your work in the metrics by the end of the week. When something works, everyone knows it was you. When it doesn't, we learn and move — no blame, no theatre.</p>
-          <p>We care about outcomes, not hours. Work from where you do your best thinking, on a schedule that fits your life. What we ask in return is simple: take ownership, move fast, and tell the truth about what the numbers say.</p>
-        </div>
-        <div class="glass fade-up" style="padding:34px;align-self:start;">
-          <h3 style="font-size:16px;font-weight:700;margin-bottom:18px;">What you can expect</h3>
-          <div style="display:flex;flex-direction:column;gap:14px;">
-            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Remote-first, outcome-driven — trust over surveillance.</p></div>
-            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Real ownership of a product surface from week one.</p></div>
-            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">Work across verticals and modern stacks — grow fast.</p></div>
-            <div style="display:flex;gap:12px;align-items:flex-start;"><span class="checklist__num" style="font-weight:800;">→</span><p style="color:var(--text-muted);font-size:14.5px;line-height:1.7;">A front-row seat to building consumer products at scale.</p></div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -289,27 +307,6 @@
           <div class="feature-card__icon"><span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span></div>
           <h3>Craftspeople</h3>
           <p>People who care how it feels, not just whether it works — because trust is won in the details.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NO OPEN ROLES -->
-  <section class="no-roles" id="open-roles" style="border-top:1px solid var(--border);padding-top:90px;">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker" style="justify-content:center;">Open positions</span>
-        <h2 class="display fade-up">Want to join the journey?</h2>
-      </div>
-      <div class="no-roles__card fade-up">
-        <div class="no-roles__inner">
-          <div class="no-roles__icon"><span class="icon-chip icon-chip--lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M12 20v-8"/><path d="M12 12C12 8 9 5 4 5c0 4 3 7 8 7z"/><path d="M12 14c0-3 2.5-5 6-5 0 3-2.5 5-6 5z"/></svg></span></div>
-          <h3>No open roles — for now</h3>
-          <p>Sorry, we don't have any open positions yet — but we're growing fast. Write to us at <span class="no-roles__email">hello@theodyssey.one</span> and tell us what you'd love to work on, and we'll get in touch with you about future collaboration.</p>
-          <a href="mailto:hello@theodyssey.one?subject=Future%20collaboration%20with%20Odyssey" class="btn btn--primary">
-            <span>Email hello@theodyssey.one</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </a>
         </div>
       </div>
     </div>

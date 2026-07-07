@@ -16,6 +16,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=15">
+  <style>
+    /* Spiral galaxy in the hero */
+    .ap-galaxy { position:absolute; right:9%; top:50%; transform:translateY(-50%); width:clamp(250px,32vw,470px); z-index:0; opacity:0.85; pointer-events:none; }
+    .ap-galaxy svg { width:100%; height:100%; display:block; }
+    @media (max-width:900px){ .ap-galaxy{ right:1%; opacity:0.5; width:230px; } }
+  </style>
 </head>
 <body>
 
@@ -49,12 +55,36 @@
   <header class="page-hero">
     <div class="starfield" data-stars="70"></div>
     <div class="page-hero__glow"></div>
+    <div class="ap-galaxy" aria-hidden="true">
+      <svg viewBox="0 0 470 300" fill="none">
+        <defs>
+          <radialGradient id="apCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+            <stop offset="35%" stop-color="#c9b8ff" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <g transform="rotate(-16 235 150)">
+          <ellipse cx="235" cy="150" rx="200" ry="64" stroke="#dbe7ff" stroke-width="1.4" opacity="0.28"/>
+          <ellipse cx="235" cy="150" rx="150" ry="46" stroke="#dbe7ff" stroke-width="1.6" opacity="0.38"/>
+          <path d="M235 150 C 300 128, 372 132, 425 158" stroke="#dbe7ff" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
+          <path d="M235 150 C 170 172, 98 168, 45 142" stroke="#dbe7ff" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
+          <path d="M235 150 C 268 108, 330 96, 390 108" stroke="#dbe7ff" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/>
+          <path d="M235 150 C 202 192, 140 204, 80 192" stroke="#dbe7ff" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/>
+          <circle cx="235" cy="150" r="60" fill="url(#apCore)"/>
+          <circle cx="235" cy="150" r="13" fill="#ffffff"/>
+          <circle cx="330" cy="122" r="2.6" fill="#dbe7ff" opacity="0.7"/>
+          <circle cx="150" cy="180" r="2.6" fill="#dbe7ff" opacity="0.7"/>
+          <circle cx="392" cy="150" r="2" fill="#dbe7ff" opacity="0.55"/>
+          <circle cx="90 " cy="150" r="2" fill="#dbe7ff" opacity="0.55"/>
+        </g>
+      </svg>
+    </div>
     <div class="container">
       <a href="index.html" class="page-hero__back">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         Back to homepage
       </a>
-      <span class="label">Our approach</span>
       <h1 class="page-hero__title fade-up">From idea<br><span class="gradient-text">to scale</span></h1>
       <p class="page-hero__subtitle fade-up">A repeatable playbook for building consumer products that grow — disciplined at every stage, from the first question to the last optimization.</p>
     </div>
@@ -130,13 +160,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- COSMIC BANNER -->
-  <section style="padding:34px 0 4px;">
-    <div class="container">
-      <img src="assets/banner-approach.png" alt="Cosmic banner" style="width:100%;height:auto;display:block;border-radius:var(--radius-xl);border:1px solid var(--border);">
     </div>
   </section>
 

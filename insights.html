@@ -16,6 +16,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=15">
+  <style>
+    /* Quasar in the hero */
+    .in-quasar { position:absolute; right:11%; top:50%; transform:translateY(-50%); width:clamp(220px,26vw,380px); z-index:0; opacity:0.85; pointer-events:none; }
+    .in-quasar svg { width:100%; height:100%; display:block; }
+    @media (max-width:900px){ .in-quasar{ right:2%; opacity:0.5; width:200px; } }
+  </style>
 </head>
 <body>
 
@@ -49,12 +55,35 @@
   <header class="page-hero">
     <div class="starfield" data-stars="70"></div>
     <div class="page-hero__glow"></div>
+    <div class="in-quasar" aria-hidden="true">
+      <svg viewBox="0 0 380 340" fill="none">
+        <defs>
+          <radialGradient id="inQCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+            <stop offset="38%" stop-color="#9fe8ff" stop-opacity="0.42"/>
+            <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="inQJet" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#9fe8ff" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#9fe8ff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="190" y1="150" x2="190" y2="18" stroke="url(#inQJet)" stroke-width="7" stroke-linecap="round"/>
+        <line x1="190" y1="190" x2="190" y2="322" stroke="url(#inQJet)" stroke-width="7" stroke-linecap="round" transform="rotate(180 190 256)"/>
+        <ellipse cx="190" cy="170" rx="140" ry="38" stroke="#dbe7ff" stroke-width="1.6" opacity="0.35"/>
+        <ellipse cx="190" cy="170" rx="98" ry="26" stroke="#dbe7ff" stroke-width="2" opacity="0.5"/>
+        <circle cx="190" cy="170" r="52" fill="url(#inQCore)"/>
+        <circle cx="190" cy="170" r="12" fill="#ffffff"/>
+        <circle cx="88" cy="128" r="2.4" fill="#dbe7ff" opacity="0.6"/>
+        <circle cx="300" cy="212" r="2.4" fill="#dbe7ff" opacity="0.6"/>
+        <circle cx="318" cy="120" r="2" fill="#dbe7ff" opacity="0.5"/>
+      </svg>
+    </div>
     <div class="container">
       <a href="index.html" class="page-hero__back">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         Back to homepage
       </a>
-      <span class="label">Insights</span>
       <h1 class="page-hero__title fade-up">Notes from<br><span class="gradient-text">the studio</span></h1>
       <p class="page-hero__subtitle fade-up">How we think about building, growing, and scaling consumer products — playbooks, metrics, and lessons from the field.</p>
     </div>
