@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Static business card website for **Odyssey** — a venture studio building web and mobile app products. The site lives at `theodyssey.one` and is shared with counterparties such as payment acquirers, integrators, and business partners.
+Static business card website for **Odyssey** — a venture studio building web and mobile app products. The site lives at `odyssey.team` and is shared with counterparties such as payment acquirers, integrators, and business partners.
 
 No build tools, no dependencies, no package manager — a hand-written multi-page static site. All pages share `styles.css` + `script.js` and a duplicated (inline) nav / footer / cookie-banner block. Open any `.html` directly in a browser, or serve the folder (`python3 -m http.server -d . 8000`) to preview with correct relative paths.
 
@@ -31,7 +31,7 @@ The repo is hosted at `git@github.com:Mycelium-Lab/odyssey-landing.git`. Push `m
 | `script.js` | Nav scroll, mobile menu, fade-up observer, contact form (null-safe), cookie banner, magnetic primary buttons, starfield generator (fills every `.starfield`). |
 | `assets/logo-mark.svg` | Compass logo — used in nav, footer, and as favicon on every page. |
 | `assets/og.png` | 1200×630 social share image (referenced by `og:image`). Regenerate by screenshotting an HTML template. |
-| `robots.txt`, `sitemap.xml` | SEO. Sitemap lists all public pages under `https://theodyssey.one/`. |
+| `robots.txt`, `sitemap.xml` | SEO. Sitemap lists all public pages under `https://odyssey.team/`. |
 
 **Shared blocks are duplicated** across every page (nav, mobile menu, footer, cookie banner). When editing navigation or the footer, update it in **all** pages — there is no include mechanism.
 
@@ -57,7 +57,7 @@ The repo is hosted at `git@github.com:Mycelium-Lab/odyssey-landing.git`. Push `m
 
 ## Company info (used across the site)
 
-- Domain: `theodyssey.one`
+- Domain: `odyssey.team`
 - Email: `hello@theodyssey.one`
 - Address: Workland Maakri 25, Tallinn, Estonia
 - Copyright year: 2026

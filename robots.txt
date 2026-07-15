@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://theodyssey.one/sitemap.xml
+Sitemap: https://odyssey.team/sitemap.xml
