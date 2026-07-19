@@ -188,6 +188,20 @@ body {
   flex-shrink: 0;
 }
 
+.nav__logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  filter: invert(1);
+}
+
+.hero__logo-icon {
+  height: 22px;
+  width: auto;
+  vertical-align: middle;
+  filter: invert(1);
+}
+
 .nav__links {
   display: flex;
   align-items: center;
